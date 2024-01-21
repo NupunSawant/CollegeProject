@@ -14,6 +14,7 @@ const Header = () => {
       alignItems="center"
       justifyContent="space-between"
       wrap="wrap"
+      zIndex='99999'
       py="6"
       px="6"
       bgColor="gray.800"
