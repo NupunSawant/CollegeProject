@@ -1,4 +1,4 @@
-import { Flex, Icon } from "@chakra-ui/react";
+import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import { IoStar, IoStarHalf, IoStarOutline } from "react-icons/io5";
 
 const Rating = ({ value, color = "red.500" ,text}) => {
