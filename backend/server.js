@@ -1,6 +1,7 @@
 import colors from "colors";
-const express = require("express");
-const dotenv = require("dotenv");
+import dotenv from "dotenv";
+import express from "express";
+
 
 import connectDB from "./config/db.js";
 import { errorHandler, notFound } from "./middlewares/errorMiddleware.js";
