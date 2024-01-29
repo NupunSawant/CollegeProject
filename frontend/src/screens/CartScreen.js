@@ -1,7 +1,7 @@
 import { useParams,  useSearchParams } from 'react-router-dom'
 
 const CartScreen = () => {
-    const { id } = useParmas() ;
+    const { id } = useParams() ;
 
     const [searchParams] = useSearchParams();
     const qty = searchParams.get('qty')
