@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link as RouterLink, useNavigate, useParams } from "react-router-dom";
 
-import { listProductsDetails } from "../actions/productsActions";
+import { listProductDetails } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import Rating from "../components/Rating";
@@ -22,13 +22,13 @@ const ProductScreen = () => {
 
   const { id } = useParams();
 
-  const [qty, setQty] = useState();
+  const [qty, setQty] = useState(1);
 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
 
   useEffect(() => {
-    dispatch(listProductsDetails(id));
+    dispatch(listProductDetails(id));
   }, [id, dispatch]);
 
   const addToCartHandler = () => {
@@ -101,8 +101,10 @@ const ProductScreen = () => {
                   value={qty}
                   onChange={(e) => setQty(e.target.value)}
                   width="30%">
-                  {[...Array(product.countInStock).key()].map((i) => (
-                    <option value={i}>{i}</option>
+                  {[...Array(product.countInStock).keys()].map((i) => (
+                    <option value={i + 1} key={i + 1}>
+                      {i + 1}
+                    </option>
                   ))}
                 </Select>
               </Flex>

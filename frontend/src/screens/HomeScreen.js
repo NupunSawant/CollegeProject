@@ -2,7 +2,7 @@ import { Grid, Heading } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { listProducts } from "../actions/productsActions";
+import { listProducts } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import ProductCard from "../components/ProductCard";
