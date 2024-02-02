@@ -24,7 +24,7 @@ const getProductById = asyncHandler(async (req, res) => {
     if (product) {
       res.json(product);
     } else {
-      res.status(404).json({ message: "Product not Found" });
+      res.status(404).json({ message: "Product not found" });
     }
   } catch (err) {
     console.log(err.message);
@@ -32,4 +32,4 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 });
 
-export { getProducts, getProductById };
+export { getProductById, getProducts };
