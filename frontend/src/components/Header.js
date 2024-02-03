@@ -68,7 +68,7 @@ const Header = () => {
 
 			{/* Menu */}
 			<Box
-				dispay={{ base: show ? "block" : "none", md: "flex" }}
+				display={{ base: show ? "block" : "none", md: "flex" }}
 				width={{ base: "full", md: "auto" }}
 				mt={{ base: 4, md: 0 }}>
 				<HeaderMenuItem icon={HiShoppingBag} label="cart" url="/cart" />
