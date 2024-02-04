@@ -9,6 +9,7 @@ import CartScreen from "./screens/CartScreen";
 import LoginScreen from "./screens/LoginScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import RegisterScreen from "./screens/RegisterScreen";
+import ShippingScreen from "./screens/ShippingScreen";
 
 function App() {
 	return (
@@ -29,6 +30,7 @@ function App() {
 					<Route path="/login" element={<LoginScreen />} />
 					<Route path="/register" element={<RegisterScreen />} />
 					<Route path="/profile" element={<ProfileScreen />} />
+					<Route path="/shipping" element={<ShippingScreen />} />
 				</Routes>
 			</Flex>
 			<Footer />
