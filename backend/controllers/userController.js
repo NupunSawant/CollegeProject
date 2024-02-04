@@ -72,7 +72,7 @@ const registerUser = asyncHandler(async (req, res) => {
 			name: user.name,
 			email: user.email,
 			isAdmin: user.isAdmin,
-			token: generateToken(user.id),
+			token: generateToken(user._id),
 		});
 	} else {
 		res.status(400);
@@ -109,4 +109,5 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 		throw new Error("User not found");
 	}
 });
+
 export { authUser, getUserProfile, registerUser, updateUserProfile };
